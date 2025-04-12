@@ -44,9 +44,9 @@ def f_getSinValue(degree):
 
 def f_buildSinWave(amp=1, freq=1, phase=0):
     sinWave = []
-    pts = tuple(i + phase for i in range(360 +1))
+    pts = tuple(i + phase for i in range(0,360 * freq +1,freq))
     for deg in pts:
-        sinWave.append(amp * f_getSinValue(round(deg * freq)))
+        sinWave.append(amp * f_getSinValue(deg))
     return Signal(sinWave)
 
 def f_buildCosWave(amp=1, freq=1, phase=0):
