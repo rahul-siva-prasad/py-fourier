@@ -1,7 +1,8 @@
 import math
 import numpy as np
-from .sigClass import Signal
 import matplotlib.pyplot as plt
+
+from .sigClass import Signal
 from .sinLookup import SIN_ONE_DEG_LOOKUP
 
 def f_plotGraph(*data,title=""):
